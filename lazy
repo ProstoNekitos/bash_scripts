@@ -21,3 +21,9 @@ function untar()
             ;;
     esac
 }
+
+#Echoes absolute path to file (with filename)
+function pwdf()
+{
+    echo "$(pwd)/$1"
+}

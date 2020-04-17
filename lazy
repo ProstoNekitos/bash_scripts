@@ -1,0 +1,23 @@
+#creates dir and cd to it
+function md()
+{
+    mkdir $1 && cd $1
+}
+
+#Exactly what is says, verbose
+function untar()
+{
+    file=$1
+    extension="${file##*.}"
+    case $extension in
+        "tar")
+            tar -xvf $file
+            ;;
+        "gz")
+            tar -xzvf $file
+            ;;
+        "bz2")
+            tar -xvjf $file
+            ;;
+    esac
+}

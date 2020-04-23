@@ -9,7 +9,9 @@ function untar()
 {
     file=$1
     extension="${file##*.}"
+    echo $extension
     case $extension in
+        "xz") ;&
         "tar")
             tar -xvf $file
             ;;
